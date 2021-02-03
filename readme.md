@@ -26,7 +26,13 @@ Sebagai tugas akhir produk kreatif jurusan RPL (Rekayasa Perangkat Lunak atau  S
 # Author
 
 name: Rizky Tegar Pratama 
+
 github : https://github.com/rizkytegar/Sirekap-APP
+
 web : https://rizkytegar.my.id
+
+
+
+
 
 Lisensi terbuka (open source) @2021 Rizky Tegar 
