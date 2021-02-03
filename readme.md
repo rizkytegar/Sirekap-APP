@@ -1,6 +1,4 @@
-###################
-What is CodeIgniter
-###################
+* SIREKAP APP
 
 Aplikasi rekap anggaran dan pengeluran bulanan Sirekap APP
 
