@@ -9,7 +9,7 @@ Dibangun dengan :
 - fontawesome 5.13
 - mysql database
 
-** Instalasi
+* Instalasi
 
 - Download atau clone project tersebut
 
@@ -19,7 +19,11 @@ git clone https://github.com/rizkytegar/Sirekap-APP
 - import database yang ada di folder database
 - setting konfigurasi base_url, dan database (db name, db user, dan db password)
 
-** Author
+* Tujuan
+
+Sebagai tugas akhir produk kreatif jurusan RPL (Rekayasa Perangkat Lunak atau  Software engineer)
+
+* Author
 
 name: Rizky Tegar Pratama 
 github : https://github.com/rizkytegar/Sirekap-APP
