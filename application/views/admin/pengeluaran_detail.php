@@ -69,7 +69,7 @@ $jum = $row['anggaran'] - array_sum($hargatotal);
         <td><p><?php  if(isset($row['bulan'])){echo $row['bulan']; }?> <?php  if(isset($row['tahun'])){echo $row['tahun']; }?></p></td>
         </tr>
   <tr>
-  <td><p>Total Pengeluaran</p></td>
+  <td><p>Anggaran Dipakai</p></td>
     <td><p>:</p></td>
   <td><p><?php if(isset($jmh)){echo rupiah($jmh); } ?></p></td>
   </tr>
@@ -85,20 +85,55 @@ $jum = $row['anggaran'] - array_sum($hargatotal);
   </tr>
         </tbody>
       </table>
+
     </div>
-<div class="py-3">
-  <a href="<?php echo base_url('api_rekap/print/')?><?php  if(isset($row['id_jumlah'])){echo $row['id_jumlah']; }?>" class="btn btn-danger ml-3">
-    <i class="fa fa-file-pdf"></i> Print Rekap</a>
 
-  <a href="<?php echo base_url('api_rekap/print_pengeluaran/')?><?php  if(isset($row['id_jumlah'])){echo $row['id_jumlah']; }?>" class="btn btn-warning ml-3">
-    <i class="fa fa-file-pdf"></i> Print Pengeluaran</a>
-</div>
-</div>
+    <div class="row py-3 ">
+      <div class="col-sm-6 ">
+        <div class="card border-light shadow-sm bg-success">
+          <div class="card-body text-center  text-white">
 
-<?php
-function rupiah($angka){
-	$hasil_rupiah = "Rp " . number_format($angka, 0, ",", ".",);
-	return $hasil_rupiah;
+            <?php
+                $an = $row['anggaran'];
 
-}
- ?>
+               $jumlahku2 = $jmh/$an*100;
+
+               ?>
+        <h1> <?php echo $jumlahku2;?> % </h1>
+        <p> Anggaran Telah Dipakai</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card border-light shadow-sm bg-primary">
+          <div class="card-body text-center text-white">
+            <?php
+                $an = $row['anggaran'];
+
+               $jumlahku = $jum/$an*100;
+
+               ?>
+        <h1> <?php echo $jumlahku;?> % </h1>
+        <p> Anggaran Belum Dipakai</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="py-3">
+      <a href="<?php echo base_url('api_rekap/print/')?><?php  if(isset($row['id_jumlah'])){echo $row['id_jumlah']; }?>" class="btn btn-danger ml-3">
+        <i class="fa fa-file-pdf"></i> Rekap</a>
+
+      <a href="<?php echo base_url('api_rekap/print_pengeluaran/')?><?php  if(isset($row['id_jumlah'])){echo $row['id_jumlah']; }?>" class="btn btn-warning ml-3">
+        <i class="fa fa-file-pdf"></i> Pengeluaran</a>
+    </div>
+    </div>
+
+    <?php
+    function rupiah($angka){
+    	$hasil_rupiah = "Rp " . number_format($angka, 0, ",", ".",);
+    	return $hasil_rupiah;
+
+    }
+     ?>

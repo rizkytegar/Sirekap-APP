@@ -79,7 +79,7 @@
             <td><p><?php  if(isset($row['bulan'])){echo $row['bulan']; }?> <?php  if(isset($row['tahun'])){echo $row['tahun']; }?></p></td>
           </tr>
           <tr>
-            <td><p>Total Pengeluaran</p></td>
+            <td><p>Anggaran Dipakai</p></td>
             <td><p>:</p></td>
             <td><p><?php if(isset($jmh)){echo rupiah($jmh); } ?></p></td>
           </tr>
