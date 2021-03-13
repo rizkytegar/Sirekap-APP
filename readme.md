@@ -1,4 +1,4 @@
-# SIREKAP APP
+# SIREKAP APP versi 1.0
 
 Aplikasi rekap anggaran dan pengeluran bulanan Sirekap APP
 
